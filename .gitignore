@@ -1,4 +1,5 @@
 data/*
+asc_data
 
 !data/ltstdb.sh
 !data/mitdb.sh

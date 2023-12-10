@@ -14,7 +14,7 @@ do
 
     matlab -nodisplay -nodesktop -r "detection('$filename', $freq); quit;"
 
-    wrann -r "data/$filename" -a qrs < "$filename.asc"
+    wrann -r "data/$filename" -a qrs < "asc_data/$filename.asc"
     bxb -r "data/$filename" -a atr qrs -l eval1.txt eval2.txt
     sumstats eval1.txt eval2.txt > results.txt
 done

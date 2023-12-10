@@ -10,7 +10,7 @@ function [] = detection(recordName, frequency)
 
         qrs_peaks = dec(nlpf_output, frequency);
 
-        fileID = fopen([recordName '.asc'], 'w');
+        fileID = fopen(['asc_data/' recordName '.asc'], 'w');
         for i = 1:numel(qrs_peaks)
             fprintf(fileID, '0:00:00.00 %d N 0 0 0\n', qrs_peaks(i));
         end
