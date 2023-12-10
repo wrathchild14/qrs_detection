@@ -4,6 +4,8 @@
 files=$(find data -regex '.*[0-9]\.hea$')
 # files=$(find data -regex '.*/s[0-9]+\.hea')
 
+mkdir -p asc_data
+
 for file in $files
 do
     filename=$(basename "$file" .hea)
