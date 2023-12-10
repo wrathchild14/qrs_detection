@@ -18,10 +18,10 @@ do
 #	Use these lines for download with progress indication
 	echo "Downloading .hea file for for record $r ..."
 	wget -c --progress=dot $SERVER$r".hea" 2>&1 | grep --line-buffered "%" | sed -u -e "s,\.,,g" | awk '{printf("\b\b\b\b%4s", $2)}'
-#	echo "Downloading .atr file for for record $r ..."
-#	wget -c --progress=dot $SERVER$r".atr" 2>&1 | grep --line-buffered "%" | sed -u -e "s,\.,,g" | awk '{printf("\b\b\b\b%4s", $2)}'
-#	echo "Downloading .dat file for for record $r ..."
-#	wget -c --progress=dot $SERVER$r".dat" 2>&1 | grep --line-buffered "%" | sed -u -e "s,\.,,g" | awk '{printf("\b\b\b\b%4s", $2)}'
+	echo "Downloading .atr file for for record $r ..."
+	wget -c --progress=dot $SERVER$r".atr" 2>&1 | grep --line-buffered "%" | sed -u -e "s,\.,,g" | awk '{printf("\b\b\b\b%4s", $2)}'
+	echo "Downloading .dat file for for record $r ..."
+	wget -c --progress=dot $SERVER$r".dat" 2>&1 | grep --line-buffered "%" | sed -u -e "s,\.,,g" | awk '{printf("\b\b\b\b%4s", $2)}'
 #	Use these lines for quiet dowload
 #	wget -q --progress=bar:force -c $SERVER$r".hea"
 #	wget -q --progress=bar:force -c $SERVER$r".atr"
