@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # files=$(find data -name '*.hea')
-files=$(find data -regex '.*/[0-9]+\.hea')
+files=$(find data -regex '.*[0-9]\.hea$')
+# files=$(find data -regex '.*/s[0-9]+\.hea')
 
 for file in $files
 do
