@@ -2,3 +2,6 @@ data/*
 
 !data/ltstdb.sh
 !data/mitdb.sh
+
+*.asc
+eval*
