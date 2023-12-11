@@ -1,6 +1,6 @@
 function peaks = dec(x, freq)
-    alpha = 0.1;
-    gamma = 0.2;
+    alpha = 0.05;
+    gamma = 0.15;
     peaks = [];
 
     n = 1;

@@ -1,5 +1,5 @@
 function y = nlpf(x, freq)
-    window_size = round((freq / 1000) * 150);
+    window_size = round((freq / 200) * 30);
     x_squared = x .^ 2;
     y = zeros(size(x));
     for n = 1:numel(x)

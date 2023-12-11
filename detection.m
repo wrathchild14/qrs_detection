@@ -4,7 +4,7 @@ function [] = detection(recordName, frequency)
         % eeg_data = load([recordName 'm.mat']);
         eeg = eeg_data.val(1, :);
 
-        M = 5;
+        M = 7;
         lphf_output = lhpf(eeg, M);
         nlpf_output = nlpf(lphf_output, frequency);
 
@@ -15,7 +15,7 @@ function [] = detection(recordName, frequency)
             fprintf(fileID, '0:00:00.00 %d N 0 0 0\n', qrs_peaks(i));
         end
         fclose(fileID);
-
+        clear eeg_data eeg lphf_output nlpf_output qrs_peaks;
     catch ME
         disp(['Error: ' ME.message]);
     end
