@@ -4,7 +4,7 @@ function peaks = dec(x, freq)
     peaks = [];
 
     n = 1;
-    N = floor((freq / 1000) * 250);
+    N = floor((freq / 200) * 30);
     threshold = max(x(1:N));
 
     while (n + N < numel(x))
